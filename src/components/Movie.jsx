@@ -11,7 +11,7 @@ export default function Movie(props){
             {
               !props.toggleSearch ? (
                 (props.site ==='anime' || props.site ==='manga') ? (
-                  <h3 style={{top:'-1%'}}>{props.title}</h3>
+                  <h3 style={{top:'-0.5%'}}>{props.title}</h3>
                 ) : (
                   <h3>{props.title}</h3>
                 )

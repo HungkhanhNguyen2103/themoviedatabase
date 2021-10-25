@@ -120,7 +120,7 @@ function App() {
   const handleChange=(e)=>{
     setToggleSearch(false)
     e.preventDefault(); 
-    document.getElementById('input-search').value="";
+    if(!isloadMovie) document.getElementById('input-search').value="";
     setSite('movie')
     setDiscoverMovie('/discover/movie?sort_by=popularity.desc')
     setAPI(BASE_URL + '/discover/movie?sort_by=popularity.desc&' + API_KEY + language + '&page=1' )
@@ -137,7 +137,7 @@ function App() {
     setToggleHidden(false)
     setToggleSearch(false)
     setloadMovie(false)
-    document.getElementById('input-search').value="";
+    if(!isloadMovie) document.getElementById('input-search').value="";
     setTitle(value.title)
     setSite(value.site)
     setToggleNext(false)
@@ -402,6 +402,7 @@ function App() {
             page={page}
             toggleHidden={toggleHidden}
             handleMenu={handleMenu}
+            setToggleHidden={setToggleHidden}
             />
             <Profile
             handleLanguage={handleLanguage}

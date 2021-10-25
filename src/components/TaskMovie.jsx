@@ -68,7 +68,7 @@ export default function TaskMovie(props){
               </div>
               {
                 (props.task.overview !== "" && props.task.overview != null) ? (
-                  <div className="main__movie--overeview">
+                  <div className="main__movie--overeview" onClick={handleClickMovie}>
                     <h4>Overview</h4>
                     <span>{props.task.overview}</span>
                   </div>

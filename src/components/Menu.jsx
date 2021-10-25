@@ -94,6 +94,7 @@ export default function Menu(props){
         site : 'game',
     };
 
+
     return(
         <>
         <ul className="top-panel__navigation">
@@ -129,11 +130,11 @@ export default function Menu(props){
               </li>
               <li className="top-panel__more"><button><img src={more} alt="more" className="more" /><img src={more1} alt="more1" className="more1" /></button><div className="top-panel__text"><span>more</span></div></li>
         </ul>
-        <div className={!props.toggleHidden ? ("background__menu d-none") : ("background__menu")} ></div>
-        <div className={!props.toggleHidden ? ("background__media d-none") : ("background__media")} >
+        <div className={!props.toggleHidden ? ("background__menu hidden") : ("background__menu")} ></div>
+        <div className={!props.toggleHidden ? ("background__media hidden") : ("background__media")}  >
         <img src={close} alt="close" onClick={props.handleMenu}/>    
         <ul className="top-panel__navigation top-panel__media">
-        <li className="top-panel__comics"><button><img src={comics} alt="comics" className="comics" /><img src={comics1} alt="comics1" className="comics1" /></button><div className="top-panel__text"><span>comics</span></div>
+        <li className="top-panel__comics"><button><img src={comics} alt="comics" className="comics" /><img src={comics1} alt="comics1" className="comics1" /></button><div className="top-panel__text top-panel__text--comics"><span>comics</span></div>
         <ul className="top-panel__movie--layer top-panel__comics--layer">
             <li><button className="btn" onClick={(value)=>props.actionCategory(AN_URL)}>Anime</button></li>
             <li><button className="btn" onClick={(value)=>props.actionCategory(MAN_URL)}>Manga</button></li>
@@ -147,7 +148,7 @@ export default function Menu(props){
             <li><button className="btn" onClick={(value)=>props.handleDiscover(BEST_DRAMA)}>Best Drama's</button></li>
         </ul>
         </li>          
-        <li className="top-panel__game"><button ><img src={game} alt="game" className="game" /><img src={game1} alt="game1" className="game1" /><img src={game2} alt="game2" className="game2" /></button><div className="top-panel__text"><span>game</span></div>
+        <li className="top-panel__game"><button ><img src={game} alt="game" className="game" /><img src={game1} alt="game1" className="game1" /><img src={game2} alt="game2" className="game2" /></button><div className="top-panel__text top-panel__text--game"><span>game</span></div>
         <ul className="top-panel__movie--layer top-panel__game--layer">
             <li><button className="btn" onClick={(value)=>props.handleToGame(METACRITIC_RATINGS)}>Metacritic Ratings</button></li>
             <li><button className="btn" onClick={(value)=>props.handleToGame(ANTICIPATED_UPCOMING)}>Most Anticipated Upcoming</button></li>
